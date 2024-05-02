@@ -40,3 +40,19 @@ Technologies, Libraries, APIs:
 4. __CSS:__ For styling the game's user interface, including layout, colors, and animations.
 5. __NPM:__ To manage project dependencies
 6. __Sprite:__ Used for animations in the environment.
+
+Implementation Timeline:
+-------------------------
+* Thursday: Set up the canvas and begin by adding circle objects.
+* Friday: Implement object movement and test collision detection.
+* Weekend: Develop spawning mechanics for objects with random sizes and disappearance upon crossing the screen.
+* Monday: Update the object shape and enhance object visuals with spaceship animations.
+* Tuesday: Implement score counting functionality.
+* Wednesday: Style the page.
+* Thursday Morning: Rewrite the README file.
+
+Future Implementations:
+--------
+* Add music and a mute button with a range for the volume.
+* Add skins as rewards if the user reaches a certain score.
+* Add buttons to choose different backgrounds.
