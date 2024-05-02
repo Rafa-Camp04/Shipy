@@ -1,0 +1,1 @@
+Shipy is a game where the player controls a spaceship with the objective of growing in size by colliding with smaller ships, while avoiding larger ones to survive. The game keeps track of the number of ships eliminated and displays the high score. Spaceships spawn in random sizes from the sides of the screen and travel until they disappear on the other side.
