@@ -28,7 +28,7 @@ Wireframe:
 * __Instructions:__ Provides information about how the game works
 * __Score:__ This section displays the score and high scores of the player.
 * __Background:__ This is the area where the game is running.
-* __Nav Links:__ It includes my personal links.
+* __Nav Links:__ It includes my Linkedin and GitHub links.
 * __Mute:__ A mute button for the music.
 * __Controls:__ Explains how to use the keyboard arrows for movement.
 
