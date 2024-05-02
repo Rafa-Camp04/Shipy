@@ -46,13 +46,13 @@ Implementation Timeline:
 * Thursday: Set up the canvas and begin by adding circle objects.
 * Friday: Implement object movement and test collision detection.
 * Weekend: Develop spawning mechanics for objects with random sizes and disappearance upon crossing the screen.
-* Monday: Update the object shape and enhance object visuals with spaceship animations.
+* Monday: Update the shapes of the objects and enhance their visuals with spaceship animations.
 * Tuesday: Implement score counting functionality.
 * Wednesday: Style the page.
 * Thursday Morning: Rewrite the README file.
 
-Future Implementations:
+Bonus:
 --------
-* Add music and a mute button with a range for the volume.
-* Add skins as rewards if the user reaches a certain score.
-* Add buttons to choose different backgrounds.
+* Incorporate music with a mute button and volume control range.
+* Introduce skins as rewards for achieving specific scores.
+* Implement buttons to select different backgrounds.
