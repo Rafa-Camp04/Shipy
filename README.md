@@ -31,3 +31,12 @@ Wireframe:
 * __Nav Links:__ It includes my personal links.
 * __Mute:__ A mute button for the music.
 * __Controls:__ Explains how to use the keyboard arrows for movement.
+
+Technologies, Libraries, APIs:
+---------------------------------
+1. __JavaScript (ES6+):__ It will be used for implementing game logic, player controls, and interactions within the game environment.
+2. __Webpack__ to bundle and transpile the source JavaScript code.
+3. __HTML5 Canvas:__ For rendering graphics and creating the game's visual interface.
+4. __CSS:__ For styling the game's user interface, including layout, colors, and animations.
+5. __NPM:__ To manage project dependencies
+6. __Sprite:__ Used for animations in the environment.
