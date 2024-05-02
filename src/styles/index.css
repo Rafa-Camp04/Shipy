@@ -1,0 +1,17 @@
+header {
+    text-align: justify;
+    height: 80px;
+}
+
+h1 {
+    font-family: ;
+}
+
+body {
+    background-image: url('page-background.jpg');
+}
+
+#background-canvas {
+    display: flex;
+    margin: auto;
+}
