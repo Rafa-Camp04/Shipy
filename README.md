@@ -8,15 +8,16 @@ Functionality & MVPs
 ----------------------
 __In this game, users will be able to:__
 
-* Start and pause the game board:
+* __Start and pause the game board:__
+
+![play](https://github.com/Rafa-Camp04/Shipy/assets/161013936/9a435138-6369-414a-9382-e9fca7865146)
 
 
-
-* Move the spaceship around the screen:
+* __Move the spaceship around the screen:__
 
   ![Rocket  GIF](https://github.com/Rafa-Camp04/Shipy/assets/161013936/3bcebcd2-7e3f-40bb-b12e-db71fa830b48)
   
-* Keep track of the score in real time:
+* __Keep track of the score in real time:__
 
 ![1066dd667858a751b7bd5135271be376](https://github.com/Rafa-Camp04/Shipy/assets/161013936/1615b464-b3da-4534-811c-6afcb9e27ad9)
 
