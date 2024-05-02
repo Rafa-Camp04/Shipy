@@ -39,7 +39,7 @@ Technologies, Libraries, APIs:
 3. __HTML5 Canvas:__ For rendering graphics and creating the game's visual interface.
 4. __CSS:__ For styling the game's user interface, including layout, colors, and animations.
 5. __NPM:__ To manage project dependencies
-6. __Sprite:__ Used for animations in the environment.
+6. __Sprite:__ Used for animations.
 
 Implementation Timeline:
 -------------------------
