@@ -1,4 +1,3 @@
-// import Game from "./game.js";
 import MovingObject from "./moving-object.js";
 
 class Enemy extends MovingObject {
@@ -37,13 +36,12 @@ class Enemy extends MovingObject {
         return vel;
     }
 
-    // movingEnemy() {
-    //     if (this.randomPos[0] === -50) {
-    //         this.pos[0] += 1;
-    //     } else {
-    //         this.pos[0] -= 1;
-    //     }
-    // }
+    moveEnemy() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(backgroundImg, 0, 0, canvas.width, canvas.height);
+        enemy.move();
+        enemy.draw(ctx);
+    }
 
 };
 
