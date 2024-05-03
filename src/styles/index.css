@@ -1,14 +1,14 @@
 header {
-    text-align: justify;
     height: 80px;
 }
 
 h1 {
-    font-family: ;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    background-image: url('page-background.jpg');
+    background-image: url('https://www.bhmpics.com/downloads/solar-system-minimalist-Wallpapers/18.thumb-1920-1172191.png');
 }
 
 #background-canvas {
