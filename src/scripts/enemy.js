@@ -3,7 +3,7 @@ import * as Util from "./util.js";
 
 class Enemy extends MovingObject {
     static COLOR = "#2F739A";
-    static RADIUS = 50;
+    static RADIUS = 30;
     // static VEL = [50, 50];
     // static POS = [100, 100];
 

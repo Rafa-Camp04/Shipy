@@ -12,7 +12,7 @@ const backgroundImg = new Image();
 backgroundImg.src = '../media/background_02.jpeg';
 // backgroundImg.src = '../media/page-background.jpg';
 
-const enemy = new Enemy({ pos: [0, 300] });
+const enemy = new Enemy({ pos: [-100, 300] });
 
 backgroundImg.onload = function() {
     ctx.drawImage(backgroundImg, 0, 0, canvas.width, canvas.height);
@@ -21,8 +21,7 @@ backgroundImg.onload = function() {
 
 function moveEnemy() {
     enemy.move();
-    enemy.draw(ctx); // Call the move method of the enemy object
+    enemy.draw(ctx);
 }
 
-// Call the moveEnemy function every second
 setInterval(moveEnemy, 1);
