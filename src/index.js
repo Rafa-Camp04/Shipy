@@ -10,7 +10,6 @@ const backgroundImg = new Image();
 
 // backgroundImg.src = '../media/orange-test.webp';
 backgroundImg.src = '../media/background_02.jpeg';
-// backgroundImg.src = '../media/page-background.jpg';
 
 const enemy = new Enemy({ pos: [-100, 300] });
 
@@ -20,6 +19,7 @@ backgroundImg.onload = function() {
 };
 
 function moveEnemy() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     enemy.move();
     enemy.draw(ctx);
 }
