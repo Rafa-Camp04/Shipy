@@ -11,7 +11,7 @@ const backgroundImg = new Image();
 // backgroundImg.src = '../media/orange-test.webp';
 backgroundImg.src = '../media/background_02.jpeg';
 
-const enemy = new Enemy({ pos: [-100, 300] });
+const enemy = new Enemy({});
 
 backgroundImg.onload = function() {
     ctx.drawImage(backgroundImg, 0, 0, canvas.width, canvas.height);
