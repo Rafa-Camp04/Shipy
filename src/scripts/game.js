@@ -9,8 +9,12 @@ class Game extends MovingObject {
     };
 
     addEnemies() {
-        const enemy = new Enemy({ pos: this.randomPos });
+        const enemy = new Enemy({});
+        const enemy2 = new Enemy({});
+        const enemy3 = new Enemy({});
         this.enemies.push(enemy);
+        this.enemies.push(enemy2);
+        this.enemies.push(enemy3);
     };
 
     // draw(ctx) {

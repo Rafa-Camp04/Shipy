@@ -14,7 +14,7 @@ class Enemy extends MovingObject {
     };
 
     randomRadius() {
-        const validRadius = [5, 10, 20, 30, 40];
+        const validRadius = [2, 5, 5, 10, 10, 20, 20, 30, 40];
         let index = Math.floor(Math.random() * validRadius.length);
 
         return validRadius[index];
@@ -31,7 +31,7 @@ class Enemy extends MovingObject {
     };
 
     randomVel() {
-        const validVel = [1, 1, 1, 2, 2, 2, 3];
+        const validVel = [1, 1.5, 1.5, 2, 2, 2, 3];
         let index = Math.floor(Math.random() * validVel.length);
 
         const vel = [validVel[index], 0];
