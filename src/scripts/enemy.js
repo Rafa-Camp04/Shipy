@@ -8,6 +8,7 @@ class Enemy extends MovingObject {
         options.vel = [1, 0];
         options.color = "#2F739A";
         super(options);
+        this.vel = this.randomVel();
         this.pos = this.randomPos();
         this.radius = this.randomRadius();
     };
@@ -28,6 +29,14 @@ class Enemy extends MovingObject {
 
         return pos;
     };
+
+    randomVel() {
+        const validVel = [1, 1, 1, 2, 2, 2, 3];
+        let index = Math.floor(Math.random() * validVel.length);
+
+        const vel = [validVel[index], 0];
+        return vel;
+    }
 
     // movingEnemy() {
     //     if (this.randomPos[0] === -50) {
