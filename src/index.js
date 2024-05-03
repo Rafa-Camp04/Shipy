@@ -15,7 +15,7 @@ backgroundImg.src = '../media/background_01.jpeg';
 const enemy = new Enemy({});
 
 backgroundImg.onload = function() {
- 
+    ctx.drawImage(backgroundImg, 0, 0, canvas.width, canvas.height);
 }
 
 function moveEnemy() {
