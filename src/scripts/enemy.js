@@ -1,6 +1,5 @@
 // import Game from "./game.js";
 import MovingObject from "./moving-object.js";
-import * as Util from "./util.js";
 
 class Enemy extends MovingObject {
 

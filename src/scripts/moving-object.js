@@ -18,6 +18,7 @@ class MovingObject {
 
             ctx.fillStyle = "#00FF00";
             ctx.fill();
+            ctx.closePath();
         // }
     }
 

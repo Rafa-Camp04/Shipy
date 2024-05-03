@@ -3,8 +3,9 @@ import Enemy from "./enemy";
 
 class Game extends MovingObject {
 
+    static ENEMIES = []
+
     constructor() {
-        this.enemies = [];
         this.addEnemies();
     };
 
@@ -12,9 +13,9 @@ class Game extends MovingObject {
         const enemy = new Enemy({});
         const enemy2 = new Enemy({});
         const enemy3 = new Enemy({});
-        this.enemies.push(enemy);
-        this.enemies.push(enemy2);
-        this.enemies.push(enemy3);
+        Game.ENEMIES.push(enemy);
+        Game.ENEMIES.push(enemy2);
+        Game.ENEMIES.push(enemy3);
     };
 
     // draw(ctx) {
