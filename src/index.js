@@ -9,8 +9,8 @@ const ctx = canvas.getContext('2d');
 
 const backgroundImg = new Image();
 // backgroundImg.src = '../media/orange-test.webp';
-// backgroundImg.src = '../media/background_02.jpeg';
-backgroundImg.src = '../media/background_01.jpeg';
+backgroundImg.src = '../media/background_02.jpeg';
+// backgroundImg.src = '../media/background_01.jpeg';
 
 const enemy = new Enemy({});
 
