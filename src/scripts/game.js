@@ -11,8 +11,8 @@ class Game extends MovingObject {
         this.addEnemies();
         this.backgroundImg = new Image();
 
-        // this.backgroundImg.src = '../media/orange-test.webp';
-        this.backgroundImg.src = '../media/background_02.jpeg';
+        this.backgroundImg.src = '../media/orange-test.webp';
+        // this.backgroundImg.src = '../media/background_02.jpeg';
         // this.backgroundImg.src = '../../media/background_01.jpeg';
     };
 
