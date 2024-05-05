@@ -9,8 +9,9 @@ class GameView {
         this.ctx = this.canvas.getContext('2d');
         this.backgroundImg = new Image();
 
-        this.backgroundImg.onload = function() {
-            this.ctx.drawImage(this.backgroundImg, 0, 0, canvas.width, canvas.height);
+        this.backgroundImg.onload = () => {
+            // debugger
+            this.ctx.drawImage(this.backgroundImg, 0, 0, this.canvas.width, this.canvas.height);
         };
 
         // this.backgroundImg.src = '../media/orange-test.webp';
@@ -22,7 +23,7 @@ class GameView {
         setInterval(() => {
             this.game.moveObjects();
             this.game.draw(this.ctx);
-        }, 5);
+        }, 10);
     };
 
 };

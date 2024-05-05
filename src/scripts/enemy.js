@@ -12,7 +12,7 @@ class Enemy extends MovingObject {
     };
 
     randomRadius() {
-        const validRadius = [2, 5, 5, 10, 10, 20, 20, 30, 40];
+        const validRadius = [2, 6, 6, 10, 10, 18, 18, 26, 26, 40, 40];
         let index = Math.floor(Math.random() * validRadius.length);
 
         return validRadius[index];
@@ -29,19 +29,19 @@ class Enemy extends MovingObject {
     };
 
     randomVel() {
-        const validVel = [1, 1.5, 1.5, 2, 2, 2, 3];
+        const validVel = [1, 1.1, 1.2, 1.3, 1.4, 1.5,  1.6, 1.7, 1.8, 2, 2.5, 3];
         let index = Math.floor(Math.random() * validVel.length);
 
         const vel = [validVel[index], 0];
         return vel;
     }
 
-    moveEnemy() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(backgroundImg, 0, 0, canvas.width, canvas.height);
-        enemy.move();
-        enemy.draw(ctx);
-    }
+    // moveEnemy() {
+    //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //     ctx.drawImage(backgroundImg, 0, 0, canvas.width, canvas.height);
+    //     enemy.move();
+    //     enemy.draw(ctx);
+    // }
 
 };
 
