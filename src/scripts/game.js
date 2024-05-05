@@ -9,6 +9,11 @@ class Game extends MovingObject {
         this.ship = new Ship({});
         this.enemies = [],
         this.addEnemies();
+        this.backgroundImg = new Image();
+
+        // this.backgroundImg.src = '../media/orange-test.webp';
+        // this.backgroundImg.src = '../media/background_02.jpeg';
+        this.backgroundImg.src = '../../media/background_01.jpeg';
     };
 
     addEnemies() {
@@ -26,6 +31,7 @@ class Game extends MovingObject {
 
     draw(ctx) {
         ctx.clearRect(0, 0, 1000, 660);
+        ctx.drawImage(this.backgroundImg, 0, 0, 1000, 660);
 
         this.enemies.forEach((enemy) => {
             enemy.draw(ctx);
