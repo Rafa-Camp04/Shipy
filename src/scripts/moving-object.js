@@ -11,6 +11,14 @@ class MovingObject {
         this.pos[1]+=this.vel[1];
     }
 
+    moveRight() {
+        this.pos[0]+=this.vel[0];
+    }
+
+    moveLeft() {
+        this.pos[0]-=this.vel[0];
+    }
+
     draw(ctx) {
         ctx.beginPath();
         ctx.arc(this.pos[0], this.pos[1], this.radius, 0, Math.PI * 2, true);

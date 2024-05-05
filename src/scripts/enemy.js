@@ -9,10 +9,11 @@ class Enemy extends MovingObject {
         this.vel = this.randomVel();
         this.pos = this.randomPos();
         this.radius = this.randomRadius();
+        this.startEnemyPos = this.pos[0];
     };
 
     randomRadius() {
-        const validRadius = [2, 6, 6, 10, 10, 18, 18, 26, 26, 40, 40];
+        const validRadius = [2, 6, 6, 10, 10, 18, 18, 26, 26, 40];
         let index = Math.floor(Math.random() * validRadius.length);
 
         return validRadius[index];
@@ -35,13 +36,6 @@ class Enemy extends MovingObject {
         const vel = [validVel[index], 0];
         return vel;
     }
-
-    // moveEnemy() {
-    //     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //     ctx.drawImage(backgroundImg, 0, 0, canvas.width, canvas.height);
-    //     enemy.move();
-    //     enemy.draw(ctx);
-    // }
 
 };
 
