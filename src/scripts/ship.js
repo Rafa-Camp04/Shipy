@@ -3,7 +3,7 @@ import MovingObject from "./moving-object"
 class Ship extends MovingObject {
 
     static CANVAS = document.getElementById('background-canvas');
-    static CTX = Game.CANVAS.getContext('2d');
+    static CTX = Ship.CANVAS.getContext('2d');
 
     static POS = [500, 330];
     static VEL = [1, 1];
@@ -11,6 +11,7 @@ class Ship extends MovingObject {
     static COLOR = "#2F739A"
 
     constructor(options) {
+        super();
         options.pos = Ship.POS;
         options.vel = Ship.VEL;
         options.radius = Ship.RADIUS;

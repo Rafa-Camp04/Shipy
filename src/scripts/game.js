@@ -4,19 +4,33 @@ import Ship from "./ship";
 
 class Game extends MovingObject {
 
-    static ENEMIES = []
-
     constructor() {
+        super();
+        this.ship = new Ship({});
+        this.enemies = [],
         this.addEnemies();
     };
 
     addEnemies() {
         for (let index = 0; index < 20; index++) {
             const enemy = new Enemy({});
-            Ship.ENEMIES.push(enemy)
-            Ship.ENEMIES[index].draw(Game.CTX)
+            this.enemies.push(enemy);
         };
-        setInterval(moveEnemy, 10);
+    };
+
+    moveObjects() {
+        this.enemies.forEach((enemy) => {
+            enemy.move();
+        });
+    };
+
+    draw(ctx) {
+        ctx.clearRect(0, 0, 1000, 660);
+
+        this.enemies.forEach((enemy) => {
+            enemy.draw(ctx);
+        });
+
     };
 
 };
