@@ -9,8 +9,6 @@ class GameView {
         this.ctx = this.canvas.getContext('2d');
     };
 
-
-
     start () {
         setInterval(() => {
             this.game.moveObjects();

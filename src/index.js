@@ -8,10 +8,6 @@ window.Enemy = Enemy;
 //     ctx.drawImage(backgroundImg, 0, 0, canvas.width, canvas.height);
 // }
 
-// // backgroundImg.src = '../media/orange-test.webp';
-// // backgroundImg.src = '../media/background_02.jpeg';
-// backgroundImg.src = '../media/background_01.jpeg';
-
 // function moveEnemy() {
 //     ctx.clearRect(0, 0, canvas.width, canvas.height);
 //     ctx.drawImage(backgroundImg, 0, 0, canvas.width, canvas.height);
