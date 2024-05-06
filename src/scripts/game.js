@@ -21,7 +21,7 @@ class Game extends MovingObject {
     step() {
         this.moveEnemies();
         this.addEnemies();
-        this.ship.move();
+        this.ship.moveShip();
         this.growShip();
     };
 
@@ -56,7 +56,7 @@ class Game extends MovingObject {
             }
 
             if (enemy.startEnemyPos === -50) {
-                enemy.move();
+                enemy.moveRight();
             } else {
                 enemy.moveLeft();
             };
@@ -98,20 +98,23 @@ class Game extends MovingObject {
     };
 
     bindKeyHandlers(game) {
+        const vel = game.ship.vel
+
         document.addEventListener("keydown", function(event) {
-            if (event.code === "ArrowUp") game.ship.vel[1] = -2;
-            if (event.code === "ArrowDown") game.ship.vel[1] = 2;
-            if (event.code === "ArrowLeft") game.ship.vel[0] = -2;
-            if (event.code === "ArrowRight") game.ship.vel[0] = 2;
+            if (event.code === "ArrowUp") vel[2] = -2;
+            if (event.code === "ArrowDown") vel[3] = 2;
+            if (event.code === "ArrowLeft") vel[0] = -2;
+            if (event.code === "ArrowRight") vel[1] = 2;
         })
 
         document.addEventListener("keyup", function(event) {
-            if (event.code === "ArrowUp") game.ship.vel[1] = 0;
-            if (event.code === "ArrowDown") game.ship.vel[1] = 0;
-            if (event.code === "ArrowLeft") game.ship.vel[0] = 0;
-            if (event.code === "ArrowRight") game.ship.vel[0] = 0;
+            if (event.code === "ArrowUp") vel[2] = 0;
+            if (event.code === "ArrowDown") vel[3] = 0;
+            if (event.code === "ArrowLeft") vel[0] = 0;
+            if (event.code === "ArrowRight") vel[1] = 0;
         })
     };
+
 };
 
 export default Game;
