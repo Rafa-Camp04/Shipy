@@ -10,6 +10,7 @@ class Game extends MovingObject {
         this.score = 0;
         this.enemies = [];
         this.addEnemies();
+        this.bindKeyHandlers();
         this.backgroundImg = new Image();
 
         // this.backgroundImg.src = '../media/orange-test.webp';
@@ -39,7 +40,7 @@ class Game extends MovingObject {
 
     // spawn new enemies
     addEnemies() {
-        for (let index = 0; this.enemies.length < 8; index++) {
+        for (let index = 0; this.enemies.length < 50; index++) {
             const enemy = new Enemy({});
             this.enemies.push(enemy);
         };
@@ -83,7 +84,7 @@ class Game extends MovingObject {
             let enemy = this.enemies[i];
 
             if (this.ship.isCollidedWith(enemy) && this.ship.isEnemySmaller(enemy)) {
-                this.ship.radius += 0.3;
+                this.ship.radius += 0.2;
                 this.increaseScore(enemy);
                 this.remove(enemy);
             } else if (this.ship.isCollidedWith(enemy) && !this.ship.isEnemySmaller(enemy)) {
@@ -97,8 +98,8 @@ class Game extends MovingObject {
         return this.score += enemy.radius;
     };
 
-    bindKeyHandlers(game) {
-        const vel = game.ship.vel
+    bindKeyHandlers() {
+        const vel = this.ship.vel
 
         document.addEventListener("keydown", function(event) {
             if (event.code === "ArrowUp") vel[2] = -2;
