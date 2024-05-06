@@ -39,7 +39,6 @@ class Game extends MovingObject {
 
     // spawn new enemies
     addEnemies() {
-        debugger
         for (let index = 0; this.enemies.length < 8; index++) {
             const enemy = new Enemy({});
             this.enemies.push(enemy);
