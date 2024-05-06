@@ -7,7 +7,8 @@ class Game extends MovingObject {
     constructor() {
         super();
         this.ship = new Ship({});
-        this.enemies = [],
+        this.score = 0;
+        this.enemies = [];
         this.addEnemies();
         this.backgroundImg = new Image();
 
@@ -16,6 +17,7 @@ class Game extends MovingObject {
         this.backgroundImg.src = '../media/background_01.jpg';
     };
 
+    // runs the game
     step() {
         this.moveEnemies();
         this.addEnemies();
@@ -23,6 +25,7 @@ class Game extends MovingObject {
         this.growShip();
     };
 
+    // it prints the canvas and objects
     drawGame(ctx) {
         ctx.clearRect(0, 0, 1000, 660);
         ctx.drawImage(this.backgroundImg, 0, 0, 1000, 660);
@@ -30,11 +33,11 @@ class Game extends MovingObject {
         this.enemies.forEach((enemy) => {
             enemy.drawObject(ctx);
         });
-
+        
         this.ship.drawObject(ctx);
-
     };
 
+    // spawn new enemies
     addEnemies() {
         for (let index = 0; this.enemies.length < 8; index++) {
             const enemy = new Enemy({});
@@ -42,6 +45,7 @@ class Game extends MovingObject {
         };
     };
 
+    // enemies cross the canvas until hit the other side
     moveEnemies() {
 
         for (let i = 0; i < this.enemies.length; i++) {
@@ -59,6 +63,7 @@ class Game extends MovingObject {
         };
     };
 
+    // returns a boolean indicating if the given object is out the canvas
     isOutCanvas(pos) {
         if (pos[0] < -50 || pos[0] > 1050) {
             return true;
@@ -66,17 +71,20 @@ class Game extends MovingObject {
         return false;
     };
 
+    // delete object from canvas
     remove(object) {
         const enemyIndex = this.enemies.indexOf(object);
         this.enemies.splice(enemyIndex, 1);
     }
 
+    // increase the ship's radius by 1 if it collides with a smaller enemy. Otherwise, call the game over function.
     growShip() {
         for (let i = 0; i < this.enemies.length; i++) {
             let enemy = this.enemies[i];
 
             if (this.ship.isCollidedWith(enemy) && this.ship.isEnemySmaller(enemy)) {
-                this.ship.radius += 1;
+                this.ship.radius += 0.3;
+                this.increaseScore(enemy);
                 this.remove(enemy);
             } else if (this.ship.isCollidedWith(enemy) && !this.ship.isEnemySmaller(enemy)) {
                 //game over
@@ -84,6 +92,26 @@ class Game extends MovingObject {
         };
     };
 
+    // add to the score
+    increaseScore(enemy) {
+        return this.score += enemy.radius;
+    };
+
+    bindKeyHandlers(game) {
+        document.addEventListener("keydown", function(event) {
+            if (event.code === "ArrowUp") game.ship.vel[1] = -2;
+            if (event.code === "ArrowDown") game.ship.vel[1] = 2;
+            if (event.code === "ArrowLeft") game.ship.vel[0] = -2;
+            if (event.code === "ArrowRight") game.ship.vel[0] = 2;
+        })
+
+        document.addEventListener("keyup", function(event) {
+            if (event.code === "ArrowUp") game.ship.vel[1] = 0;
+            if (event.code === "ArrowDown") game.ship.vel[1] = 0;
+            if (event.code === "ArrowLeft") game.ship.vel[0] = 0;
+            if (event.code === "ArrowRight") game.ship.vel[0] = 0;
+        })
+    };
 };
 
 export default Game;

@@ -5,9 +5,8 @@ class Ship extends MovingObject {
     constructor(options) {
         super();
         this.pos = [500, 330];
-        this.vel = [1, 1];
+        this.vel = [0, 0];
         this.radius = 7;
-        this.color = "#2F739A";
     };
 
     isCollidedWith(enemy) {

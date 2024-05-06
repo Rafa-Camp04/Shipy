@@ -3,8 +3,6 @@ import MovingObject from "./moving-object.js";
 class Enemy extends MovingObject {
 
     constructor(options){
-        options.vel = [1, 0];
-        options.color = "#2F739A";
         super(options);
         this.vel = this.randomVel();
         this.pos = this.randomPos();
@@ -13,7 +11,7 @@ class Enemy extends MovingObject {
     };
 
     randomRadius() {
-        const validRadius = [2, 6, 6, 10, 10, 18, 18, 26, 26, 40];
+        const validRadius = [2, 6, 10, 18, 18, 26, 26, 32, 32, 40];
         let index = Math.floor(Math.random() * validRadius.length);
 
         return validRadius[index];

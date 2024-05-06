@@ -13,6 +13,7 @@ class GameView {
         setInterval(() => {
             this.game.step();
             this.game.drawGame(this.ctx);
+            this.game.bindKeyHandlers(this.game);
         }, 10);
     };
 
