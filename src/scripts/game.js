@@ -14,7 +14,7 @@ class Game extends MovingObject {
 
         // this.backgroundImg.src = '../media/orange-test.webp';
         // this.backgroundImg.src = '../media/background_02.jpeg';
-        // this.backgroundImg.src = '../media/background_01.jpg';
+        this.backgroundImg.src = '../media/background_01.jpg';
     };
 
     // runs the game
@@ -39,6 +39,7 @@ class Game extends MovingObject {
 
     // spawn new enemies
     addEnemies() {
+        debugger
         for (let index = 0; this.enemies.length < 8; index++) {
             const enemy = new Enemy({});
             this.enemies.push(enemy);
