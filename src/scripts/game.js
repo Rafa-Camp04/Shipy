@@ -40,7 +40,7 @@ class Game extends MovingObject {
 
     // spawn new enemies
     addEnemies() {
-        for (let index = 0; this.enemies.length < 50; index++) {
+        for (let index = 0; this.enemies.length < 8; index++) {
             const enemy = new Enemy({});
             this.enemies.push(enemy);
         };
@@ -95,7 +95,7 @@ class Game extends MovingObject {
 
     // add to the score
     increaseScore(enemy) {
-        return this.score += enemy.radius;
+        return this.score += enemy.radius * 2;
     };
 
     bindKeyHandlers() {
