@@ -2,21 +2,22 @@ import MovingObject from "./moving-object"
 
 class Ship extends MovingObject {
 
-    static CANVAS = document.getElementById('background-canvas');
-    static CTX = Ship.CANVAS.getContext('2d');
-
-    static POS = [500, 330];
-    static VEL = [1, 1];
-    static RADIUS = 15;
-    static COLOR = "#2F739A"
-
     constructor(options) {
         super();
-        options.pos = Ship.POS;
-        options.vel = Ship.VEL;
-        options.radius = Ship.RADIUS;
-        options.color = Ship.COLOR;
+        this.pos = [500, 330];
+        this.vel = [1, 1];
+        this.radius = 7;
+        this.color = "#2F739A";
+    };
 
+    isCollidedWith(enemy) {
+        const distance = Math.sqrt((this.pos[0] - enemy.pos[0]) ** 2 + (this.pos[1] - enemy.pos[1]) ** 2);
+        const totalRadius = this.radius + enemy.radius;
+        return distance < totalRadius;
+    };
+
+    isEnemySmaller(enemy) {
+        return enemy.radius < this.radius;
     };
 
 };
