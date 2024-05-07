@@ -14,8 +14,8 @@ class Game extends MovingObject {
         this.backgroundImg = new Image();
         this.backgroundImg.src = 'src/media/background_01.jpg';
 
-        // this.backgroundImg.src = '../media/orange-test.webp';
-        // this.backgroundImg.src = '../media/background_02.jpeg';
+        // this.backgroundImg.src = 'src/media/orange-test.webp';
+        // this.backgroundImg.src = 'src/media/background_02.jpeg';
     };
 
     // runs the game
@@ -85,7 +85,7 @@ class Game extends MovingObject {
             let enemy = this.enemies[i];
 
             if (this.ship.isCollidedWith(enemy) && this.ship.isEnemySmaller(enemy)) {
-                this.ship.radius += 0.2;
+                this.ship.radius += 0.1;
                 this.increaseScore(enemy);
                 this.remove(enemy);
             } else if (this.ship.isCollidedWith(enemy) && !this.ship.isEnemySmaller(enemy)) {

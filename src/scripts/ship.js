@@ -14,7 +14,6 @@ class Ship extends MovingObject {
     };
 
     drawShip(ctx) {
-
         ctx.save();
 
         if (this.direction === 'right' && this.pressed === true) {
@@ -26,9 +25,9 @@ class Ship extends MovingObject {
             ctx.rotate(-Math.PI / 2);
             ctx.drawImage(this.sprite, 0*79, 1*79, 79, 79, -this.radius * 1.5, -this.radius * 1.7, this.radius * 3, this.radius * 3);
         } else if (this.direction === 'left' && this.pressed === false) {
-                ctx.translate(this.pos[0], this.pos[1]);
-                ctx.rotate(-Math.PI / 2);
-                ctx.drawImage(this.sprite, 1*79, 0*79, 79, 79, -this.radius * 1.5, -this.radius * 1.7, this.radius * 3, this.radius * 3);
+            ctx.translate(this.pos[0], this.pos[1]);
+            ctx.rotate(-Math.PI / 2);
+            ctx.drawImage(this.sprite, 1*79, 0*79, 79, 79, -this.radius * 1.5, -this.radius * 1.7, this.radius * 3, this.radius * 3);
         } else {
             ctx.translate(this.pos[0], this.pos[1]);
             ctx.rotate(Math.PI / 2);
@@ -36,7 +35,6 @@ class Ship extends MovingObject {
         }
 
         ctx.restore();
-
     }
 
     moveShip() {
