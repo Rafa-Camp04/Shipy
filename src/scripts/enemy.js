@@ -13,6 +13,9 @@ class Enemy extends MovingObject {
     drawEnemy(ctx) {
         ctx.save();
 
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
+
             if (this.startEnemyPos === -50) {
                 ctx.translate(this.pos[0], this.pos[1]);
                 ctx.rotate(Math.PI / 2);

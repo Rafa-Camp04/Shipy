@@ -6,7 +6,7 @@ class Ship extends MovingObject {
         super();
         this.pos = [500, 330];
         this.vel = [0, 0, 0, 0];
-        this.radius = 7;
+        this.radius = 9;
         this.bindKeyHandlers();
 
         this.direction = 'right';
@@ -15,6 +15,8 @@ class Ship extends MovingObject {
 
     drawShip(ctx) {
         ctx.save();
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
 
         if (this.direction === 'right' && this.pressed === true) {
             ctx.translate(this.pos[0], this.pos[1]);

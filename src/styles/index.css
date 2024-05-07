@@ -1,12 +1,17 @@
-header {
+.header {
     height: 100px;
     background-color: #120F26;
 }
 
-h1 {
-    display: flex;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.logo {
+    margin: 10px 0 0 10px;
+    height: 80px;
+    width: 150px;
 }
+
+/* h1 {
+    font-family: ; */
+/* } */
 
 body {
     width: 100%;
@@ -14,19 +19,29 @@ body {
     background-image: url('https://www.bhmpics.com/downloads/solar-system-minimalist-Wallpapers/18.thumb-1920-1172191.png');
 }
 
-/* #background-canvas {
-    display: flex;
-    margin: auto;
-} */
-
 .above-canvas {
     height: 10px;
     width: 100%;
 }
 
-.canvas-section {
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+.custom {
+    background-image: url("/Users/rafaelcampos/Documents/Shipy/src/media/left-block-HUB.png");
+    height: 660px;
+    width: 260px;
+}
+
+/* #canvas {
     display: flex;
     margin: auto;
-    height: 660px;
-    width: 1000px;
-}
+} */
+
+/* .block {
+    background-image: url("/Users/rafaelcampos/Documents/Shipy/src/media/right-block-HUB.png");
+    height: 330px;
+    width: 260px;
+} */

@@ -12,10 +12,9 @@ class Game extends MovingObject {
         this.addEnemies();
         this.maxEnemies = 10
         this.backgroundImg = new Image();
-        this.backgroundImg.src = 'src/media/background_01.jpg';
+        this.backgroundImg.src = 'src/media/background_01 copy.jpg';
 
         // this.backgroundImg.src = 'src/media/orange-test.webp';
-        // this.backgroundImg.src = 'src/media/background_02.jpeg';
     };
 
     // runs the game
