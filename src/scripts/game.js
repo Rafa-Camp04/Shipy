@@ -10,7 +10,6 @@ class Game extends MovingObject {
         this.score = 0;
         this.enemies = [];
         this.addEnemies();
-        this.ship.bindKeyHandlers();
         this.backgroundImg = new Image();
 
         // this.backgroundImg.src = '../media/orange-test.webp';

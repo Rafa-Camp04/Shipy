@@ -7,17 +7,20 @@ class Ship extends MovingObject {
         this.pos = [500, 330];
         this.vel = [0, 0, 0, 0];
         this.radius = 7;
+        this.bindKeyHandlers();
 
-        
     };
 
     drawShip(ctx) {
+
         ctx.save();
 
-        
-
+            ctx.translate(this.pos[0], this.pos[1]);
+            ctx.rotate(Math.PI / 2);
+            ctx.drawImage(this.sprite, 0*79, 1*79, 79, 79, -this.radius * 1.5, -this.radius * 1.7, this.radius * 3, this.radius * 3);
 
         ctx.restore();
+
     }
 
     moveShip() {
@@ -53,6 +56,7 @@ class Ship extends MovingObject {
                 
             }
             
+            return event.code;
         })
 
         document.addEventListener("keyup", function(event) {
@@ -67,6 +71,8 @@ class Ship extends MovingObject {
                 vel[1] = 0;
                 
             }
+
+            return event.code;
         })
     };
 
