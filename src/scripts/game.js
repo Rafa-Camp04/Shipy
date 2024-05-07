@@ -12,10 +12,10 @@ class Game extends MovingObject {
         this.addEnemies();
         this.maxEnemies = 10
         this.backgroundImg = new Image();
+        this.backgroundImg.src = 'src/media/background_01.jpg';
 
         // this.backgroundImg.src = '../media/orange-test.webp';
         // this.backgroundImg.src = '../media/background_02.jpeg';
-        this.backgroundImg.src = 'src/media/background_01.jpg';
     };
 
     // runs the game
@@ -35,6 +35,7 @@ class Game extends MovingObject {
             enemy.drawEnemy(ctx);
         });
         
+        this.ship.stayInCanvas();
         this.ship.drawShip(ctx)
     };
 

@@ -109,6 +109,26 @@ class Ship extends MovingObject {
         })
     };
 
+    stayInCanvas() {
+        const canvas = document.getElementById('background-canvas');
+
+        if (this.pos[0] - this.radius < 0) {
+            this.pos[0] = 0 + this.radius;
+        }
+
+        if (this.pos[1] - this.radius < 0) {
+            this.pos[1] = 0 + this.radius;
+        }
+
+        if (this.pos[0] + this.radius > 1000) {
+            this.pos[0] = 1000 - this.radius;
+        }
+
+        if (this.pos[1] + this.radius > 660) {
+            this.pos[1] = 660 - this.radius;
+        }
+    }
+
 };
 
 export default Ship;

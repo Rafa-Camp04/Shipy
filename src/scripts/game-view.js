@@ -1,4 +1,5 @@
 import Game from "./game";
+import Ship from "./ship";
 
 class GameView {
 
