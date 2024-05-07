@@ -10,7 +10,7 @@ class Game extends MovingObject {
         this.score = 0;
         this.enemies = [];
         this.addEnemies();
-        this.bindKeyHandlers();
+        this.ship.bindKeyHandlers();
         this.backgroundImg = new Image();
 
         // this.backgroundImg.src = '../media/orange-test.webp';
@@ -32,7 +32,7 @@ class Game extends MovingObject {
         ctx.drawImage(this.backgroundImg, 0, 0, 1000, 660);
 
         this.enemies.forEach((enemy) => {
-            enemy.drawObject(ctx);
+            enemy.drawEnemy(ctx);
         });
         
         this.ship.drawObject(ctx);
@@ -40,7 +40,7 @@ class Game extends MovingObject {
 
     // spawn new enemies
     addEnemies() {
-        for (let index = 0; this.enemies.length < 8; index++) {
+        for (let index = 0; this.enemies.length < 10; index++) {
             const enemy = new Enemy({});
             this.enemies.push(enemy);
         };
@@ -96,24 +96,6 @@ class Game extends MovingObject {
     // add to the score
     increaseScore(enemy) {
         return this.score += enemy.radius * 2;
-    };
-
-    bindKeyHandlers() {
-        const vel = this.ship.vel
-
-        document.addEventListener("keydown", function(event) {
-            if (event.code === "ArrowUp") vel[2] = -2;
-            if (event.code === "ArrowDown") vel[3] = 2;
-            if (event.code === "ArrowLeft") vel[0] = -2;
-            if (event.code === "ArrowRight") vel[1] = 2;
-        })
-
-        document.addEventListener("keyup", function(event) {
-            if (event.code === "ArrowUp") vel[2] = 0;
-            if (event.code === "ArrowDown") vel[3] = 0;
-            if (event.code === "ArrowLeft") vel[0] = 0;
-            if (event.code === "ArrowRight") vel[1] = 0;
-        })
     };
 
 };

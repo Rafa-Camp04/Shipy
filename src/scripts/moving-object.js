@@ -1,13 +1,13 @@
 class MovingObject {
 
     constructor(options) {
-        
+        this.sprite = new Image()
+        this.sprite.src = 'src/media/sprite.png';
     }
 
     
     moveRight() {
         this.pos[0]+=this.vel[0];
-        // this.pos[1]+=this.vel[1];
     }
 
     moveLeft() {
@@ -20,6 +20,7 @@ class MovingObject {
 
         ctx.fillStyle = "#00FF00";
         ctx.fill();
+
         ctx.closePath();
     }
 

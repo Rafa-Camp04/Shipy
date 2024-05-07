@@ -10,8 +10,25 @@ class Enemy extends MovingObject {
         this.startEnemyPos = this.pos[0];
     };
 
+    drawEnemy(ctx) {
+        ctx.save();
+
+            if (this.startEnemyPos === -50) {
+                ctx.translate(this.pos[0], this.pos[1]);
+                ctx.rotate(Math.PI / 2);
+                ctx.drawImage(this.sprite, 0*79, 1*79, 79, 79, -this.radius * 1.5, -this.radius * 1.7, this.radius * 3, this.radius * 3);
+            } else {
+                ctx.translate(this.pos[0], this.pos[1]);
+                ctx.rotate(-Math.PI / 2);
+                ctx.drawImage(this.sprite, 0*79, 1*79, 79, 79, -this.radius * 1.5, -this.radius * 1.7, this.radius * 3, this.radius * 3);
+            }
+
+        ctx.restore();
+
+    }
+
     randomRadius() {
-        const validRadius = [2, 6, 10, 18, 18, 26, 26, 32, 32, 40];
+        const validRadius = [3, 6, 10, 18, 18, 26, 26, 32, 32, 40];
         let index = Math.floor(Math.random() * validRadius.length);
 
         return validRadius[index];
