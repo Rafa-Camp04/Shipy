@@ -10,6 +10,7 @@ class Game extends MovingObject {
         this.score = 0;
         this.enemies = [];
         this.addEnemies();
+        this.maxEnemies = 10
         this.backgroundImg = new Image();
 
         // this.backgroundImg.src = '../media/orange-test.webp';
@@ -39,7 +40,7 @@ class Game extends MovingObject {
 
     // spawn new enemies
     addEnemies() {
-        for (let index = 0; this.enemies.length < 10; index++) {
+        for (let index = 0; this.enemies.length < this.maxEnemies; index++) {
             const enemy = new Enemy({});
             this.enemies.push(enemy);
         };
