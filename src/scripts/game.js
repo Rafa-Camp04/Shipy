@@ -35,7 +35,7 @@ class Game extends MovingObject {
             enemy.drawEnemy(ctx);
         });
         
-        this.ship.drawObject(ctx);
+        this.ship.drawShip(ctx)
     };
 
     // spawn new enemies

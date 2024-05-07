@@ -24,7 +24,6 @@ class Enemy extends MovingObject {
             }
 
         ctx.restore();
-
     }
 
     randomRadius() {
