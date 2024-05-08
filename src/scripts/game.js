@@ -122,18 +122,20 @@ class Game extends MovingObject {
             ctx.fillStyle = "white";
             ctx.font = "30px Arial";
             ctx.fillText("Paused", canvas.width / 2 - 60, canvas.height / 2);
+            ctx.font = "15px Arial";
+            ctx.fillText("press P to resume", canvas.width / 2 - 70, canvas.height / 2 + 310);
         }
     }
 
-    // gameOverScreen() {
-    //     if (this.gameOver) {
-    //         this.ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
-    //         ctx.fillRect(0, 0, canvas.width, canvas.height);
-    //         ctx.fillStyle = "red";
-    //         ctx.font = "30px Arial";
-    //         ctx.fillText("GAME OVER", canvas.width / 2 - 60, canvas.height / 2);
-    //     }
-    // }
+    gameOverScreen(ctx) {
+        if (this.gameOver === true) {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "red";
+            ctx.font = "30px Arial";
+            ctx.fillText("GAME OVER", canvas.width / 2 - 60, canvas.height / 2);
+        }
+    }
 
 };
 

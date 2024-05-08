@@ -8,7 +8,7 @@ class GameView {
         this.ctx = this.canvas.getContext('2d');
 
         this.pause();
-        this.gameOverScreen();
+        this.gameOver1();
     };
 
     start () {
@@ -25,28 +25,19 @@ class GameView {
         const ctx = this.ctx
 
         document.addEventListener('keydown', (event) => {
-            if (event.code === 'Escape') {
+            if (event.code === 'KeyP') {
                 that.pauseGame();
                 that.pauseScreen(ctx);
             }
         });
     };
 
-    gameOverScreen() {
+    gameOver1() {
         if (this.game.gameOver) {
-            this.ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
-            this.ctx.fillRect(0, 0, canvas.width, canvas.height);
-            this.ctx.fillStyle = "red";
-            this.ctx.font = "30px Arial";
-            this.ctx.fillText("GAME OVER", canvas.width / 2 - 60, canvas.height / 2);
+            debugger
+            this.game.gameOverScreen(this.ctx);
         }
     }
-
-    // gameOver() {
-    //     if (this.game.gameOver) {
-    //         this.game.gameOverScreen(this.ctx);
-    //     }
-    // }
 
 };
 

@@ -6,14 +6,21 @@
 }
 
 #block-in-header {
+    display: flex;
+    justify-content: space-between;
     width: 1572px;
-    height: 100px;
+    height: 80px;
 }
 
 .logo {
     margin: 4px 0 0 64px;
     height: 70px;
     width: 130px;
+}
+
+#links {
+    margin: 35px 70px 4px 0px;;
+    width: 100px;
 }
 
 /* h1 {
@@ -51,6 +58,11 @@ body {
 
 #right-panel {
     margin: 25px 0 0 0;
+}
+
+#arrow-keys {
+    height: 150px;
+    width: 200px;
 }
 
 #canvas {
