@@ -23,6 +23,7 @@ class Game extends MovingObject {
         this.addEnemies();
         this.ship.moveShip();
         this.growShip();
+        this.displayScore();
     };
 
     // it prints the canvas and objects
@@ -97,6 +98,11 @@ class Game extends MovingObject {
     increaseScore(enemy) {
         return this.score += enemy.radius * 2;
     };
+
+    displayScore() {
+        const score = document.getElementById('score-value');
+        score.textContent = this.score.toString();
+    }
 
 };
 
