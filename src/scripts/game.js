@@ -11,9 +11,11 @@ class Game extends MovingObject {
         this.enemies = [];
         this.addEnemies();
         this.maxEnemies = 10
+        this.paused = false
+        this.gameOver = false
+
         this.backgroundImg = new Image();
         this.backgroundImg.src = 'src/media/background_01 copy.jpg';
-
         // this.backgroundImg.src = 'src/media/orange-test.webp';
     };
 
@@ -89,7 +91,7 @@ class Game extends MovingObject {
                 this.increaseScore(enemy);
                 this.remove(enemy);
             } else if (this.ship.isCollidedWith(enemy) && !this.ship.isEnemySmaller(enemy)) {
-                //game over
+                this.gameOver = true
             };
         };
     };
@@ -103,6 +105,35 @@ class Game extends MovingObject {
         const score = document.getElementById('score-value');
         score.textContent = this.score.toString();
     }
+
+    pauseGame() {
+        if (this.paused === false) {
+            this.paused = true
+        } else {
+            this.paused = false
+        }
+    }
+
+    pauseScreen(ctx) {
+        if (this.paused) {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            debugger
+            ctx.fillStyle = "white";
+            ctx.font = "30px Arial";
+            ctx.fillText("Paused", canvas.width / 2 - 60, canvas.height / 2);
+        }
+    }
+
+    // gameOverScreen() {
+    //     if (this.gameOver) {
+    //         this.ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
+    //         ctx.fillRect(0, 0, canvas.width, canvas.height);
+    //         ctx.fillStyle = "red";
+    //         ctx.font = "30px Arial";
+    //         ctx.fillText("GAME OVER", canvas.width / 2 - 60, canvas.height / 2);
+    //     }
+    // }
 
 };
 
