@@ -1,19 +1,19 @@
 .header {
     display: flex;
     justify-content: center;
-    height: 100px;
+    height: 80px;
     background-color: #120F26;
 }
 
 #block-in-header {
-    width: 1520px;
+    width: 1572px;
     height: 100px;
 }
 
 .logo {
-    margin: 10px 0 0 10px;
-    height: 80px;
-    width: 150px;
+    margin: 5px 0 0 64px;
+    height: 70px;
+    width: 130px;
 }
 
 /* h1 {
@@ -36,20 +36,30 @@ body {
     justify-content: center;
 }
 
+#left-panel {
+    margin: 25px 0 0 0;
+}
+
+#center-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 705px;
+    width: 1052px;
+    background-image: url('../media/game-frame-copy2.png');
+}
+
+#right-panel {
+    margin: 25px 0 0 0;
+}
+
+#canvas {
+    margin: 0 42px 0 42px;
+}
+
 .hub {
     /* background-image: url('src\media\left-block-HUB.png'); */
     background-image: url('../media/left-block-HUB.png');
     height: 660px;
     width: 260px;
 }
-
-/* #canvas {
-    display: flex;
-    margin: auto;
-} */
-
-/* .block {
-    background-image: url("/Users/rafaelcampos/Documents/Shipy/src/media/right-block-HUB.png");
-    height: 330px;
-    width: 260px;
-} */
