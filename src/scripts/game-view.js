@@ -8,7 +8,6 @@ class GameView {
         this.ctx = this.canvas.getContext('2d');
 
         this.pause();
-        // this.gameOver1();
     };
 
     start () {
@@ -32,13 +31,6 @@ class GameView {
             }
         });
     };
-
-    // gameOver1() {
-    //     if (this.game.gameOver) {
-    //         debugger
-    //         this.game.gameOverScreen(this.ctx);
-    //     }
-    // }
 
 };
 

@@ -23,9 +23,12 @@
     width: 100px;
 }
 
-/* h1 {
-    font-family: ; */
-/* } */
+h1 {
+    text-align: center;
+    color: rgb(208, 225, 250);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 body {
     width: 100%;
@@ -47,6 +50,14 @@ body {
     margin: 25px 0 0 0;
 }
 
+#controls-section {
+    margin-top: 110px;
+}
+
+#instructions-section {
+    margin-top: 40px;
+}
+
 #center-panel {
     display: flex;
     justify-content: center;
@@ -60,9 +71,28 @@ body {
     margin: 25px 0 0 0;
 }
 
+#score-section {
+    margin-top: 110px;
+}
+
+#settings-section {
+    margin-top: 120px;
+}
+
+#score-value {
+    color: white;
+    font-size: larger;
+    font-family: 'Arial-narrow-bold';
+}
+
 #arrow-keys {
-    height: 150px;
-    width: 200px;
+    height: 80px;
+    width: 120px;
+}
+
+#p-key {
+    height: 40px;
+    width: 40px;
 }
 
 #canvas {
@@ -70,8 +100,24 @@ body {
 }
 
 .hub {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+
+
     /* background-image: url('src\media\left-block-HUB.png'); */
     background-image: url('../media/left-block-HUB.png');
     height: 660px;
     width: 260px;
+}
+
+p {
+    text-align: center;
+    color: #becbdb;
+    width: 150px;
+}
+
+span {
+    text-align: center;
 }
