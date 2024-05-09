@@ -17,8 +17,11 @@ __In this game, users will be able to:__
 * __Move the spaceship around the screen:__
 
 ![Capture](https://github.com/Rafa-Camp04/Shipy/assets/161013936/f7286875-a13c-40c2-a9fd-b83aa65cec47)
+
 ![Capture](https://github.com/Rafa-Camp04/Shipy/assets/161013936/b75feb29-0803-4e5e-a89a-0972cdae1995)
-  
+
+![Capture](https://github.com/Rafa-Camp04/Shipy/assets/161013936/201a84b0-ca7e-45d6-b69b-b9a63926f1cc)
+
 * __Keep track of the score in real time:__
 
 ![1066dd667858a751b7bd5135271be376](https://github.com/Rafa-Camp04/Shipy/assets/161013936/1615b464-b3da-4534-811c-6afcb9e27ad9)
