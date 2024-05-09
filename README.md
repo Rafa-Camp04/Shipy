@@ -2,7 +2,7 @@ Shipy
 =========
 Shipy is a game where the player, using the arrow keys on the keyboard, controls a spaceship with the objective of growing in size by colliding with smaller ships, while avoiding larger ones to survive. When the player starts the game, spaceships spawn in random sizes from the sides of the screen and travel until they disappear on the other side. Shipy keeps track of the number of ships eliminated and displays the score.
 
-![background_01 copy](https://github.com/Rafa-Camp04/Shipy/assets/161013936/8a311287-4f03-4928-a502-01bd2b916a03)
+![Capture](https://github.com/Rafa-Camp04/Shipy/assets/161013936/a73db07d-0d40-4975-bd50-b516cdfec0d3)
 
 Functionality & MVPs
 ----------------------
@@ -10,7 +10,7 @@ __In this game, users will be able to:__
 
 * __Start and pause the game board:__
 
-![play](https://github.com/Rafa-Camp04/Shipy/assets/161013936/9a435138-6369-414a-9382-e9fca7865146)
+![Capture2](https://github.com/Rafa-Camp04/Shipy/assets/161013936/edc0a032-2d0d-4666-82b6-7ffbf029b6fe)
 
 
 * __Move the spaceship around the screen:__
