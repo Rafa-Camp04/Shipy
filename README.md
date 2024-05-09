@@ -16,7 +16,8 @@ __In this game, users will be able to:__
 
 * __Move the spaceship around the screen:__
 
-  ![Rocket  GIF](https://github.com/Rafa-Camp04/Shipy/assets/161013936/3bcebcd2-7e3f-40bb-b12e-db71fa830b48)
+![Capture](https://github.com/Rafa-Camp04/Shipy/assets/161013936/f7286875-a13c-40c2-a9fd-b83aa65cec47)
+![Capture](https://github.com/Rafa-Camp04/Shipy/assets/161013936/b75feb29-0803-4e5e-a89a-0972cdae1995)
   
 * __Keep track of the score in real time:__
 
