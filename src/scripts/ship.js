@@ -6,13 +6,12 @@ class Ship extends MovingObject {
         super();
         this.pos = [500, 330];
         this.vel = [0, 0, 0, 0];
-        this.radius = 245;
+        this.radius = 9;
         this.bindKeyHandlers();
 
         this.arrowKeys = new Set();
 
         this.direction = 'right';
-        // this.pressed = false;
     };
 
     drawShip(ctx) {
