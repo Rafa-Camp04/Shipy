@@ -81,7 +81,6 @@ class Ship extends MovingObject {
                 ship.direction = 'right';
                 ship.arrowKeys.add(event.code);
             }
-            
             return event.code;
         })
 
@@ -94,7 +93,6 @@ class Ship extends MovingObject {
                 vel[3] = 0;
                 ship.arrowKeys.delete(event.code);
             }
-
             if (event.code === "ArrowLeft") {
                 vel[0] = 0;
                 ship.direction = 'left';
@@ -105,7 +103,6 @@ class Ship extends MovingObject {
                 ship.direction = 'right';
                 ship.arrowKeys.delete(event.code);
             }
-
             return event.code;
         })
     };
