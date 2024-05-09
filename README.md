@@ -11,6 +11,7 @@ __In this game, users will be able to:__
 * __Start and pause the game board:__
 
 ![Capture2](https://github.com/Rafa-Camp04/Shipy/assets/161013936/edc0a032-2d0d-4666-82b6-7ffbf029b6fe)
+![Capture](https://github.com/Rafa-Camp04/Shipy/assets/161013936/01f835f9-2a93-4fb4-8829-5dfb5c2699bb)
 
 
 * __Move the spaceship around the screen:__
