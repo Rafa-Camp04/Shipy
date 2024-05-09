@@ -2,7 +2,7 @@ Shipy
 =========
 Shipy is a game where the player, using the arrow keys on the keyboard, controls a spaceship with the objective of growing in size by colliding with smaller ships, while avoiding larger ones to survive. When the player starts the game, spaceships spawn in random sizes from the sides of the screen and travel until they disappear on the other side. Shipy keeps track of the number of ships eliminated and displays the score.
 
-![background_02](https://github.com/Rafa-Camp04/Shipy/assets/161013936/daecc79f-b4a1-400e-9da4-5f03b91846e4)
+![background_01 copy](https://github.com/Rafa-Camp04/Shipy/assets/161013936/8a311287-4f03-4928-a502-01bd2b916a03)
 
 Functionality & MVPs
 ----------------------
@@ -25,13 +25,11 @@ Wireframe:
 ----------
 ![wireframe](https://github.com/Rafa-Camp04/Shipy/assets/161013936/1b243a8e-2fee-42ba-8b3e-48fae7d70fe2)
 
-
-* __Instructions:__ Provides information about how the game works
-* __Score:__ This section displays the score and high scores of the player.
-* __Background:__ This is the area where the game is running.
-* __Nav Links:__ It includes my Linkedin and GitHub links.
-* __Mute:__ A mute button for the music.
 * __Controls:__ Explains how to use the keyboard arrows for movement.
+* __Instructions:__ Provides information about how the game works.
+* __Game Screen:__ This is the area where the game is running.
+* __Score:__ This section displays the score of the player.
+* __Settings:__ Future implementations.
 
 Technologies, Libraries, APIs:
 ---------------------------------
@@ -47,10 +45,10 @@ Implementation Timeline:
 * Thursday: Set up the canvas and begin by adding circle objects.
 * Friday: Implement object movement and test collision detection.
 * Weekend: Develop spawning mechanics for objects with random sizes and disappearance upon crossing the screen.
-* Monday: Update the shapes of the objects and enhance their visuals with spaceship animations.
-* Tuesday: Implement score counting functionality.
+* Monday: Enhance object visuals with spaceship animations.
+* Tuesday: Implement score counting functionality and fix bugs.
 * Wednesday: Style the page.
-* Thursday Morning: Rewrite the README file.
+* Thursday Morning: Write instructions about the project on README file.
 
 Bonus:
 --------
