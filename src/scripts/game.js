@@ -87,7 +87,7 @@ class Game extends MovingObject {
             let enemy = this.enemies[i];
 
             if (this.ship.isCollidedWith(enemy) && this.ship.isEnemySmaller(enemy)) {
-                this.ship.radius += 0.1;
+                this.ship.radius += 0.2;
                 this.maxEnemies += 1;
                 this.increaseScore(enemy);
                 this.remove(enemy);
