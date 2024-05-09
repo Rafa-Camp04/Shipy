@@ -18,7 +18,7 @@ class GameView {
         this.ctx.fillRect(0, 0, canvas.width, canvas.height);
         this.ctx.fillStyle = "white";
         this.ctx.font = "30px Arial";
-        this.ctx.fillText("Press S to start", canvas.width / 2 - 120, canvas.height / 2);
+        this.ctx.fillText("Press S to start", canvas.width / 2 - 110, canvas.height / 2);
     }
 
     start() {

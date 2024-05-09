@@ -1,3 +1,13 @@
+p {
+    text-align: center;
+    color: #becbdb;
+    width: 150px;
+}
+
+span {
+    text-align: center;
+}
+
 .header {
     display: flex;
     justify-content: center;
@@ -19,7 +29,11 @@
 }
 
 #links {
-    margin: 35px 70px 4px 0px;;
+    margin: 5px 70px 4px 0px;;
+    width: 100px;
+}
+
+#links-text {
     width: 100px;
 }
 
@@ -112,7 +126,7 @@ body {
     width: 260px;
 }
 
-p {
+/* p {
     text-align: center;
     color: #becbdb;
     width: 150px;
@@ -120,4 +134,4 @@ p {
 
 span {
     text-align: center;
-}
+} */
