@@ -6,7 +6,7 @@ class Ship extends MovingObject {
         super();
         this.pos = [500, 330];
         this.vel = [0, 0, 0, 0];
-        this.radius = 9;
+        this.radius = 245;
         this.bindKeyHandlers();
 
         this.arrowKeys = new Set();
