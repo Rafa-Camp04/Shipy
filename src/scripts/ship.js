@@ -9,8 +9,10 @@ class Ship extends MovingObject {
         this.radius = 9;
         this.bindKeyHandlers();
 
+        this.arrowKeys = new Set();
+
         this.direction = 'right';
-        this.click = false;
+        // this.pressed = false;
     };
 
     drawShip(ctx) {
@@ -18,19 +20,19 @@ class Ship extends MovingObject {
         ctx.imageSmoothingEnabled = true;
         ctx.imageSmoothingQuality = 'high';
 
-        if (this.direction === 'right' && this.click === true) {
+        if (this.direction === 'right' && this.arrowKeys.size > 0) {
             ctx.translate(this.pos[0], this.pos[1]);
             ctx.rotate(Math.PI / 2);
             ctx.drawImage(this.sprite, 0*79, 1*79, 79, 79, -this.radius * 1.5, -this.radius * 1.7, this.radius * 3, this.radius * 3);
-        } else if (this.direction === 'left' && this.click === true) {
+        } else if (this.direction === 'left' && this.arrowKeys.size > 0) {
             ctx.translate(this.pos[0], this.pos[1]);
             ctx.rotate(-Math.PI / 2);
             ctx.drawImage(this.sprite, 0*79, 1*79, 79, 79, -this.radius * 1.5, -this.radius * 1.7, this.radius * 3, this.radius * 3);
-        } else if (this.direction === 'left' && this.click === false) {
+        } else if (this.direction === 'left' && this.arrowKeys.size === 0) {
             ctx.translate(this.pos[0], this.pos[1]);
             ctx.rotate(-Math.PI / 2);
             ctx.drawImage(this.sprite, 1*79, 0*79, 79, 79, -this.radius * 1.5, -this.radius * 1.7, this.radius * 3, this.radius * 3);
-        } else {
+        } else if (this.direction === 'right' && this.arrowKeys.size === 0) {
             ctx.translate(this.pos[0], this.pos[1]);
             ctx.rotate(Math.PI / 2);
             ctx.drawImage(this.sprite, 1*79, 0*79, 79, 79, -this.radius * 1.5, -this.radius * 1.7, this.radius * 3, this.radius * 3);
@@ -63,22 +65,22 @@ class Ship extends MovingObject {
         document.addEventListener("keydown", function(event) {
             if (event.code === "ArrowUp") {
                 vel[2] = -2;
-                ship.click = true;
+                ship.arrowKeys.add(event.code);
             }
             if (event.code === "ArrowDown") {
                 vel[3] = 2;
-                ship.click = true;
+                ship.arrowKeys.add(event.code);
             }
 
             if (event.code === "ArrowLeft") {
                 vel[0] = -2;
                 ship.direction = 'left';
-                ship.click = true;
+                ship.arrowKeys.add(event.code);
             }
             if (event.code === "ArrowRight") {
                 vel[1] = 2;
                 ship.direction = 'right';
-                ship.click = true;
+                ship.arrowKeys.add(event.code);
             }
             
             return event.code;
@@ -87,22 +89,22 @@ class Ship extends MovingObject {
         document.addEventListener("keyup", function(event) {
             if (event.code === "ArrowUp") {
                 vel[2] = 0;
-                ship.click = false;
+                ship.arrowKeys.delete(event.code);
             }
             if (event.code === "ArrowDown") {
                 vel[3] = 0;
-                ship.click = false;
+                ship.arrowKeys.delete(event.code);
             }
 
             if (event.code === "ArrowLeft") {
                 vel[0] = 0;
                 ship.direction = 'left';
-                ship.click = false;
+                ship.arrowKeys.delete(event.code);
             }
             if (event.code === "ArrowRight") {
                 vel[1] = 0;
                 ship.direction = 'right';
-                ship.click = false;
+                ship.arrowKeys.delete(event.code);
             }
 
             return event.code;

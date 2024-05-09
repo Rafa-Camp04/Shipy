@@ -88,6 +88,7 @@ class Game extends MovingObject {
 
             if (this.ship.isCollidedWith(enemy) && this.ship.isEnemySmaller(enemy)) {
                 this.ship.radius += 0.1;
+                this.maxEnemies += 1;
                 this.increaseScore(enemy);
                 this.remove(enemy);
             } else if (this.ship.isCollidedWith(enemy) && !this.ship.isEnemySmaller(enemy)) {
@@ -133,6 +134,9 @@ class Game extends MovingObject {
             ctx.fillStyle = "red";
             ctx.font = "30px Arial";
             ctx.fillText("GAME OVER", canvas.width / 2 - 100, canvas.height / 2);
+            ctx.fillStyle = "white";
+            ctx.font = "15px Arial";
+            ctx.fillText("press R to restart", canvas.width / 2 - 60, canvas.height / 2 + 310);
         }
     }
 
