@@ -126,12 +126,7 @@ body {
     width: 260px;
 }
 
-/* p {
-    text-align: center;
-    color: #becbdb;
-    width: 150px;
+.header-text {
+    height: auto;
+    width: 300px;
 }
-
-span {
-    text-align: center;
-} */
