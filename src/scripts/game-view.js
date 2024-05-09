@@ -33,7 +33,7 @@ class GameView {
 
             this.game.gameOverScreen(this.ctx)
 
-            if (this.game.ship.radius > 5) {
+            if (this.game.ship.radius > 250) {
                 this.easterEgg();
             }
 
