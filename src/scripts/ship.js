@@ -14,6 +14,7 @@ class Ship extends MovingObject {
         this.direction = 'right';
     };
 
+    // testetste
     drawShip(ctx) {
         ctx.save();
         ctx.imageSmoothingEnabled = true;
