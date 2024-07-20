@@ -18,7 +18,7 @@ class GameView {
         this.ctx.fillRect(0, 0, canvas.width, canvas.height);
         this.ctx.fillStyle = "white";
         this.ctx.font = "30px Arial";
-        this.ctx.fillText("Press S to start", canvas.width / 2 - 110, canvas.height / 2);
+        this.ctx.fillText("Press S to start", canvas.width / 2 - 100, canvas.height / 2);
     }
 
     start() {
@@ -56,7 +56,7 @@ class GameView {
         const game = this.game
 
         document.addEventListener('keydown', (event) => {
-            if (event.code === 'KeyR' && game.gameOver === true) this.game = new Game();
+            if (event.code === 'KeyR') this.game = new Game();
         })
     }
 

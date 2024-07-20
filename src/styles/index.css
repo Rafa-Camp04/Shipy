@@ -29,6 +29,8 @@ span {
 }
 
 #links {
+    display: flex;
+    align-items: center;
     margin: 5px 70px 4px 0px;;
     width: 100px;
 }
@@ -115,7 +117,6 @@ body {
 
 .hub {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
 
@@ -126,7 +127,12 @@ body {
     width: 260px;
 }
 
-.header-text {
+#header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: auto;
-    width: 300px;
+    width: auto;
+    padding-right: 18px;
+    font-weight: 600;
 }
