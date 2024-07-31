@@ -28,7 +28,7 @@ class Game extends MovingObject {
         this.displayScore();
     };
 
-    // it prints the canvas and objects
+    // printing the canvas and objects
     drawGame(ctx) {
         ctx.clearRect(0, 0, 1000, 660);
         ctx.drawImage(this.backgroundImg, 0, 0, 1000, 660);
@@ -96,7 +96,7 @@ class Game extends MovingObject {
             };
         };
     };
-
+//
     // add to the score
     increaseScore(enemy) {
         return this.score += enemy.radius * 2;

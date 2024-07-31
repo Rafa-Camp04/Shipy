@@ -41,20 +41,18 @@ class GameView {
     };
 
     pause() {
-        const that = this.game
+        const game = this.game
         const ctx = this.ctx
 
         document.addEventListener('keydown', (event) => {
             if (event.code === 'KeyP') {
-                that.pauseGame();
-                that.pauseScreen(ctx);
+                game.pauseGame();
+                game.pauseScreen(ctx);
             }
         });
     };
 
     restart() {
-        const game = this.game
-
         document.addEventListener('keydown', (event) => {
             if (event.code === 'KeyR') this.game = new Game();
         })
