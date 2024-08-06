@@ -64,35 +64,35 @@ class Ship extends MovingObject {
 
         document.addEventListener("keydown", function(event) {
 
-            function oppositePressed(key) {
-                const keys = {
-                    "ArrowUp": "ArrowDown",
-                    "ArrowLeft": "ArrowRight",
-                    "ArrowRight": "ArrowLeft",
-                    "ArrowDown": "ArrowUp"
-                }
-                return ship.arrowKeys.has(keys[key])
-            };
+            // function oppositePressed(key) {
+            //     const keys = {
+            //         "ArrowUp": "ArrowDown",
+            //         "ArrowLeft": "ArrowRight",
+            //         "ArrowRight": "ArrowLeft",
+            //         "ArrowDown": "ArrowUp"
+            //     }
+            //     return ship.arrowKeys.has(keys[key])
+            // };
 
             if (event.code === "ArrowUp") {
-                if (oppositePressed(event.code)) return;
+                // if (oppositePressed(event.code)) return;
                 vel[2] = -2;
                 ship.arrowKeys.add(event.code);
             }
             if (event.code === "ArrowDown") {
-                if (oppositePressed(event.code)) return;
+                // if (oppositePressed(event.code)) return;
                 vel[3] = 2;
                 ship.arrowKeys.add(event.code);
             }
 
             if (event.code === "ArrowLeft") {
-                if (oppositePressed(event.code)) return;
+                // if (oppositePressed(event.code)) return;
                 vel[0] = -2;
                 ship.direction = 'left';
                 ship.arrowKeys.add(event.code);
             }
             if (event.code === "ArrowRight") {
-                if (oppositePressed(event.code)) return;
+                // if (oppositePressed(event.code)) return;
                 vel[1] = 2;
                 ship.direction = 'right';
                 ship.arrowKeys.add(event.code);
@@ -102,7 +102,6 @@ class Ship extends MovingObject {
 
         document.addEventListener("keyup", function(event) {
             if (event.code === "ArrowUp") {
-                // if (ship.arrowKeys.has())
                 vel[2] = 0;
                 ship.arrowKeys.delete(event.code);
             }
