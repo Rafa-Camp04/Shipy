@@ -1,7 +1,7 @@
 import MovingObject from "./moving-object.js";
 
 class Enemy extends MovingObject {
-
+//
     constructor(options){
         super(options);
         this.vel = this.randomVel();
