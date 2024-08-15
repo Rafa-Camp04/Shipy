@@ -41,11 +41,11 @@ class GameView {
     };
 
     pause() {
-        const game = this.game
         const ctx = this.ctx
 
         document.addEventListener('keydown', (event) => {
             if (event.code === 'KeyP') {
+                const game = this.game
                 game.pauseGame();
                 game.pauseScreen(ctx);
             }

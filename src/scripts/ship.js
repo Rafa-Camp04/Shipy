@@ -14,7 +14,6 @@ class Ship extends MovingObject {
         this.direction = 'right';
     };
 
-
     drawShip(ctx) {
         ctx.save();
         ctx.imageSmoothingEnabled = true;
@@ -62,22 +61,38 @@ class Ship extends MovingObject {
         const vel = this.vel
         const ship = this
 
+
         document.addEventListener("keydown", function(event) {
+
+            // function oppositePressed(key) {
+            //     const keys = {
+            //         "ArrowUp": "ArrowDown",
+            //         "ArrowLeft": "ArrowRight",
+            //         "ArrowRight": "ArrowLeft",
+            //         "ArrowDown": "ArrowUp"
+            //     }
+            //     return ship.arrowKeys.has(keys[key])
+            // };
+
             if (event.code === "ArrowUp") {
+                // if (oppositePressed(event.code)) return;
                 vel[2] = -2;
                 ship.arrowKeys.add(event.code);
             }
             if (event.code === "ArrowDown") {
+                // if (oppositePressed(event.code)) return;
                 vel[3] = 2;
                 ship.arrowKeys.add(event.code);
             }
 
             if (event.code === "ArrowLeft") {
+                // if (oppositePressed(event.code)) return;
                 vel[0] = -2;
                 ship.direction = 'left';
                 ship.arrowKeys.add(event.code);
             }
             if (event.code === "ArrowRight") {
+                // if (oppositePressed(event.code)) return;
                 vel[1] = 2;
                 ship.direction = 'right';
                 ship.arrowKeys.add(event.code);
@@ -108,8 +123,8 @@ class Ship extends MovingObject {
         })
     };
 
+    // this function add borders to the canvas, so the spaceship doesn't leave the game
     stayInCanvas() {
-        const canvas = document.getElementById('background-canvas');
 
         if (this.pos[0] - this.radius < 0) {
             this.pos[0] = 0 + this.radius;
